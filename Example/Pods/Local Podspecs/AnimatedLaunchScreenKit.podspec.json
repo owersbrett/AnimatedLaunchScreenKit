@@ -1,8 +1,8 @@
 {
   "name": "AnimatedLaunchScreenKit",
   "version": "0.1.0",
-  "summary": "A short description of AnimatedLaunchScreenKit.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A reusable animated launch screen engine for iOS.",
+  "description": "HPGLaunchScreenKit provides a configurable, animation-driven launch screen\nexperience for iOS apps using slot-style visuals, custom logos, and timing control.",
   "homepage": "https://github.com/owersbrett/AnimatedLaunchScreenKit",
   "license": {
     "type": "MIT",
@@ -16,12 +16,16 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "11.0"
+    "ios": "16.0"
   },
+  "swift_versions": [
+    "6.0"
+  ],
   "source_files": "AnimatedLaunchScreenKit/Classes/**/*",
   "resource_bundles": {
     "AnimatedLaunchScreenKitAssets": [
       "AnimatedLaunchScreenKit/Assets/*"
     ]
-  }
+  },
+  "swift_version": "6.0"
 }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public let DEFAULT_HPG_CONFIGURATION = AnimatedLaunchScreenConfiguration(
+@MainActor public let DEFAULT_HPG_CONFIGURATION = AnimatedLaunchScreenConfiguration(
     backgroundColor: UIColor(hex: "E16416"),
     cardColor: UIColor(hex: "E29C1A"),
     highlightColor: UIColor(hex: "E1C916"),

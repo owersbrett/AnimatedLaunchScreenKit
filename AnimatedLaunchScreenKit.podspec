@@ -22,8 +22,8 @@ experience for iOS apps using slot-style visuals, custom logos, and timing contr
   s.source           = { :git => 'https://github.com/owersbrett/AnimatedLaunchScreenKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
-
+  s.ios.deployment_target = '16.0'
+  s.swift_versions = ['6.0']
   s.source_files = 'AnimatedLaunchScreenKit/Classes/**/*'
   
   s.resource_bundles = {

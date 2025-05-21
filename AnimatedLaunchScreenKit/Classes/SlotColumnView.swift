@@ -1,5 +1,6 @@
 import UIKit
 
+@MainActor
 public class SlotColumnView: UIView {
 
     public enum ScrollDirection {
@@ -123,21 +124,20 @@ public class SlotColumnView: UIView {
             // Create a timer for smooth scrolling
             self.scrollTimer = Timer.scheduledTimer(withTimeInterval: 0.016, repeats: true) { [weak self] timer in
                 guard let self = self else { timer.invalidate(); return }
-                
-                // Calculate how much to scroll per frame (60fps)
-                let distance = pixelsPerSecond * 0.016
-                let direction: CGFloat = self.scrollDirection == .down ? 1 : -1
-                let newY = self.scrollView.contentOffset.y + (distance * direction)
-                
-                // Update scroll position
-                self.scrollView.contentOffset.y = newY
-                
-                // Check if we need to reset position for infinite loop
-                self.checkAndResetScrollPosition()
+
+                Task { @MainActor in
+                    let distance = pixelsPerSecond * 0.016
+                    let direction: CGFloat = self.scrollDirection == .down ? 1 : -1
+                    let newY = self.scrollView.contentOffset.y + (distance * direction)
+
+                    self.scrollView.contentOffset.y = newY
+                    self.checkAndResetScrollPosition()
+                }
             }
+
             
             // Make sure the timer runs on the main run loop
-            RunLoop.main.add(self.scrollTimer!, forMode: RunLoopMode.commonModes)
+            RunLoop.main.add(self.scrollTimer!, forMode: .common)
         }
     }
     
