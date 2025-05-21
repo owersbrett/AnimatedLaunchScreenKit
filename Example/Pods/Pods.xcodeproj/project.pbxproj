@@ -1,0 +1,1055 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		011C6D04A7AAE4D75F5B688CCF496E61 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD01EDE4FEA4CEE9B08F15A8AA8BB36 /* Data.swift */; };
+		08B9481C98AEF64EF27C7D9E0746FF36 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33E8017D66E0CDE005A9B441EF0240 /* Extensions.swift */; };
+		0AE784B590F5E2B525388F9EDCE71845 /* loadedspud.png in Resources */ = {isa = PBXBuildFile; fileRef = CCC523C9A17858ACCD555102C3FF09C5 /* loadedspud.png */; };
+		0E63BC955224F13ADDF1E98C7F31A640 /* fries.png in Resources */ = {isa = PBXBuildFile; fileRef = B5825A31DA56CCAEC1B741EA042DCEB0 /* fries.png */; };
+		0EF4580BA7B2E8EB78CD2D1B7EC31B5D /* SlotColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279BEFE2D1152A6E98558149438ED83 /* SlotColumnView.swift */; };
+		0F73D0B26C3B502893B3D64FF4E02D17 /* AnimatedLaunchScreenKitAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C08EE97F83858684DE924062D52EAA8 /* AnimatedLaunchScreenKitAssets.bundle */; };
+		0FFA0A786E6D2BD1B1B5995007DDF68D /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 44580126ABB362F77735A08DA93459FB /* sun.png */; };
+		102EFA7C9AEF00C5CF5DF604A07C5678 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E016C225D141651E9301151E2AB029 /* Main.swift */; };
+		107CD942ABCC4C50C4F75EE900C7E0F3 /* Pods-AnimatedLaunchScreenKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DD90609C46FA06FA5C46CD799FFB26 /* Pods-AnimatedLaunchScreenKit_Tests-dummy.m */; };
+		25011FE2F3E419FD872C5C2D7752F1EF /* bakedpotato.png in Resources */ = {isa = PBXBuildFile; fileRef = 68229FC89E8DD71F97FCAEC43A8E54C9 /* bakedpotato.png */; };
+		2CD333FA9F411724392D838A593F9090 /* potatuhs.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA85FB48B87C3B5D68160FE3F3BED7C /* potatuhs.png */; };
+		2CDF8758B98707674DB36F0816B02216 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79063F0AB6177CC66D5E22CCC66CED7 /* Defaults.swift */; };
+		3475E6D81EB666EF43D444848EDFA9E4 /* hashbrown.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B12A5562CE8295D6191F8A1925F81E /* hashbrown.png */; };
+		37BCBE9DA1467DC32FDED7D514F91C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		4653F3CA5FE68D01A82DF760A116FB59 /* baked.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB122A7DA4DD20EA714CB3546C1CD9C /* baked.png */; };
+		4CCEEBCF5AD8D5AEB1645B95AC1EAEBD /* AnimatedLaunchScreenKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F7ABE1D7A92FC60A5D5E209C121B02 /* AnimatedLaunchScreenKit-dummy.m */; };
+		5792BA35F06C41C636C63F19CF2D6CEE /* smashing-dips.png in Resources */ = {isa = PBXBuildFile; fileRef = 28778E0A0BBD96170890C68E7CD8CA8F /* smashing-dips.png */; };
+		5834FCFF40EEA90C4900B605343415D4 /* masher.png in Resources */ = {isa = PBXBuildFile; fileRef = 77EBB5118CE2DC30BF7EEFF3EDBEE2E3 /* masher.png */; };
+		61DB9FDA2DDC49F200B9BFA9 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB9FD92DDC49F200B9BFA9 /* Logo.swift */; };
+		61DB9FDC2DDD510200B9BFA9 /* LaunchScreenTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB9FDB2DDD510200B9BFA9 /* LaunchScreenTiming.swift */; };
+		6A883AB3B4951C93B7CE2873519392EC /* AnimatedLaunchScreenKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F2689B69B101C89D0A222242D25FEC /* AnimatedLaunchScreenKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B1F2CC9576A84494BAA3BFFF0A11CA8 /* cheesewheel.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA2F4AF061764517D0C9B504FB5EA44 /* cheesewheel.png */; };
+		71105D1C53CD473F0EA6AC8E2D1C4442 /* mashed.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A402C033A179C089C2CC2AE8B65EE9 /* mashed.png */; };
+		77555FC5523862FD03BDB72D3220EEA6 /* tractor.png in Resources */ = {isa = PBXBuildFile; fileRef = C70D6C0F78059309FBF336F9035570D5 /* tractor.png */; };
+		8BA5E45567050C06D315657563797D9D /* Pods-AnimatedLaunchScreenKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B52E3BB43298776800B55B514A4A0E5C /* Pods-AnimatedLaunchScreenKit_Example-dummy.m */; };
+		99E1339EF660F835B59647C1E7854238 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85202FF558047E6C560FFE19A8BB3C70 /* Configuration.swift */; };
+		A1E8CEE39BC8A8D5937B07BC63FB8048 /* droolingpotato.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ED6F53604CE2A5DBD1CD29C0C0D36D /* droolingpotato.png */; };
+		A7E0EBF6D509C6E9FA8FFFD7CC6372C7 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCCB6C8A36956AC91F0458F56DC7867 /* BackgroundView.swift */; };
+		A8D19F17A194AB44E8E06BA642F6CD43 /* crispycrisps.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A554E10A5F66C7DE39149F3A9F216FF /* crispycrisps.png */; };
+		ACE9E725A6813F6664656D43D6A8C364 /* butter.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD2D4C9925B6EAB1001F16603A142D1 /* butter.png */; };
+		CAABA5768B7DCCD3B61119F2D0113025 /* sheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 4461E42C2F4D44555C8EC8E45FAB3A69 /* sheet.png */; };
+		CBE9F4839A3653502EB58E528B5EEF38 /* whatcani.png in Resources */ = {isa = PBXBuildFile; fileRef = 0018D33BDAA4CF9C2F762940D75DFCF9 /* whatcani.png */; };
+		CCB224BE18B580E2D28D34074AC902C2 /* illhaveuh.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F7CBE35F52F6AAF7E80EDF3F493533 /* illhaveuh.png */; };
+		D5E257FC8098742E76CD88CADB3840DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		D7DF6C758786C09441006871D2A80964 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		E3A14A36AA3A5CE3D5D62C048E174FDE /* truck.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F5F8AC08DEC2147BBF86B2995ECE40 /* truck.png */; };
+		E83FC71EE4CA301FC9DAC105B790F56B /* getyourhotpotatoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 27AB96676ED55E75447DF3777683D95D /* getyourhotpotatoes.png */; };
+		E9BF73EF479B78221E3ED2841C8D7F7D /* Pods-AnimatedLaunchScreenKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBD6DD94C1ED7EA5CBE996EDD1560B5D /* Pods-AnimatedLaunchScreenKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED9F367414B161816B8351B7785E36EF /* saltandpepper.png in Resources */ = {isa = PBXBuildFile; fileRef = AF1A7DB6D0C25D2580791A31D626BDFB /* saltandpepper.png */; };
+		F2DF42C00C41C1D1D74D8CB48780062D /* potatochip.png in Resources */ = {isa = PBXBuildFile; fileRef = 939DA66E2FB6D397B5CC202B2BCA46D0 /* potatochip.png */; };
+		FC6A38EF6E10633E1337FBD7BEAC8FB8 /* Pods-AnimatedLaunchScreenKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85A1DA2C4AB96BA119A670E223C251E2 /* Pods-AnimatedLaunchScreenKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCE62E5A76F19EEDD93D15C06E752E65 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F84207FC2D930FB85C8B84DCF02C8787 /* logo.png */; };
+		FF55A1AAEF91BBE2535753BAA0B7BC3B /* peeler.png in Resources */ = {isa = PBXBuildFile; fileRef = A33FABCF13FD1B8DF1692E21A702F1BE /* peeler.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D23739A91AE68ED2424F27F47CF6732 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B7A4A4715A92B886E7FE57C045EA0EF;
+			remoteInfo = "AnimatedLaunchScreenKit-AnimatedLaunchScreenKitAssets";
+		};
+		56BFE752130E7F5208B025A728D4279D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2173F3322323765862C95E423E9344E;
+			remoteInfo = AnimatedLaunchScreenKit;
+		};
+		A79E78873348707B9815E31D90B8160E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E14B1496BE935DD7CD76866E51E7EF7;
+			remoteInfo = "Pods-AnimatedLaunchScreenKit_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0018D33BDAA4CF9C2F762940D75DFCF9 /* whatcani.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = whatcani.png; path = AnimatedLaunchScreenKit/Assets/whatcani.png; sourceTree = "<group>"; };
+		01F5F8AC08DEC2147BBF86B2995ECE40 /* truck.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = truck.png; path = AnimatedLaunchScreenKit/Assets/truck.png; sourceTree = "<group>"; };
+		1279BEFE2D1152A6E98558149438ED83 /* SlotColumnView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlotColumnView.swift; path = AnimatedLaunchScreenKit/Classes/SlotColumnView.swift; sourceTree = "<group>"; };
+		235BE06AA6EDD7AD2DD8A242D17D179D /* AnimatedLaunchScreenKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedLaunchScreenKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DF63CD7B0D03EF95863C67D01220D8 /* ResourceBundle-AnimatedLaunchScreenKitAssets-AnimatedLaunchScreenKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AnimatedLaunchScreenKitAssets-AnimatedLaunchScreenKit-Info.plist"; sourceTree = "<group>"; };
+		23F7CBE35F52F6AAF7E80EDF3F493533 /* illhaveuh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = illhaveuh.png; path = AnimatedLaunchScreenKit/Assets/illhaveuh.png; sourceTree = "<group>"; };
+		26ED6F53604CE2A5DBD1CD29C0C0D36D /* droolingpotato.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = droolingpotato.png; path = AnimatedLaunchScreenKit/Assets/droolingpotato.png; sourceTree = "<group>"; };
+		27AB96676ED55E75447DF3777683D95D /* getyourhotpotatoes.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = getyourhotpotatoes.png; path = AnimatedLaunchScreenKit/Assets/getyourhotpotatoes.png; sourceTree = "<group>"; };
+		284BE7D29236E135E39C98B49A060B93 /* Pods-AnimatedLaunchScreenKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedLaunchScreenKit_Example-Info.plist"; sourceTree = "<group>"; };
+		28778E0A0BBD96170890C68E7CD8CA8F /* smashing-dips.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "smashing-dips.png"; path = "AnimatedLaunchScreenKit/Assets/smashing-dips.png"; sourceTree = "<group>"; };
+		29B4D42165C7DC371166B031423557A3 /* AnimatedLaunchScreenKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedLaunchScreenKit.debug.xcconfig; sourceTree = "<group>"; };
+		2A7F34C3EBB1D4852EDF082F32DA8E4D /* Pods-AnimatedLaunchScreenKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedLaunchScreenKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		34DD90609C46FA06FA5C46CD799FFB26 /* Pods-AnimatedLaunchScreenKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnimatedLaunchScreenKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		37C356652B4304E02762EDEC4D76D81A /* AnimatedLaunchScreenKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedLaunchScreenKit-prefix.pch"; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3C08EE97F83858684DE924062D52EAA8 /* AnimatedLaunchScreenKitAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedLaunchScreenKitAssets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		41B12A5562CE8295D6191F8A1925F81E /* hashbrown.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = hashbrown.png; path = AnimatedLaunchScreenKit/Assets/hashbrown.png; sourceTree = "<group>"; };
+		44580126ABB362F77735A08DA93459FB /* sun.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = sun.png; path = AnimatedLaunchScreenKit/Assets/sun.png; sourceTree = "<group>"; };
+		4461E42C2F4D44555C8EC8E45FAB3A69 /* sheet.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = sheet.png; path = AnimatedLaunchScreenKit/Assets/sheet.png; sourceTree = "<group>"; };
+		4FD2D4C9925B6EAB1001F16603A142D1 /* butter.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = butter.png; path = AnimatedLaunchScreenKit/Assets/butter.png; sourceTree = "<group>"; };
+		51932295E41275382C9B2A1A5591D07D /* Pods-AnimatedLaunchScreenKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedLaunchScreenKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		61DB9FD92DDC49F200B9BFA9 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+		61DB9FDB2DDD510200B9BFA9 /* LaunchScreenTiming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenTiming.swift; sourceTree = "<group>"; };
+		68229FC89E8DD71F97FCAEC43A8E54C9 /* bakedpotato.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = bakedpotato.png; path = AnimatedLaunchScreenKit/Assets/bakedpotato.png; sourceTree = "<group>"; };
+		6990B97C76DEF3A4E5977E82099F46EB /* Pods-AnimatedLaunchScreenKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedLaunchScreenKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6E81F15F1515F27F52ECEB5DD488F29B /* Pods_AnimatedLaunchScreenKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimatedLaunchScreenKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E016C225D141651E9301151E2AB029 /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Main.swift; path = AnimatedLaunchScreenKit/Classes/Main.swift; sourceTree = "<group>"; };
+		75F2689B69B101C89D0A222242D25FEC /* AnimatedLaunchScreenKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedLaunchScreenKit-umbrella.h"; sourceTree = "<group>"; };
+		77EBB5118CE2DC30BF7EEFF3EDBEE2E3 /* masher.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = masher.png; path = AnimatedLaunchScreenKit/Assets/masher.png; sourceTree = "<group>"; };
+		7CD01EDE4FEA4CEE9B08F15A8AA8BB36 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = AnimatedLaunchScreenKit/Classes/Data.swift; sourceTree = "<group>"; };
+		7EDC0695BA4F00F0B729ABF0C82F5430 /* AnimatedLaunchScreenKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AnimatedLaunchScreenKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		85202FF558047E6C560FFE19A8BB3C70 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		85A1DA2C4AB96BA119A670E223C251E2 /* Pods-AnimatedLaunchScreenKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnimatedLaunchScreenKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		89F33F7E89DB40C4908A168681CC18FB /* Pods-AnimatedLaunchScreenKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedLaunchScreenKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A554E10A5F66C7DE39149F3A9F216FF /* crispycrisps.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = crispycrisps.png; path = AnimatedLaunchScreenKit/Assets/crispycrisps.png; sourceTree = "<group>"; };
+		8F2B7B010BB6F085EA19405FD9AEE94B /* Pods-AnimatedLaunchScreenKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedLaunchScreenKit_Tests-Info.plist"; sourceTree = "<group>"; };
+		939DA66E2FB6D397B5CC202B2BCA46D0 /* potatochip.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = potatochip.png; path = AnimatedLaunchScreenKit/Assets/potatochip.png; sourceTree = "<group>"; };
+		95297F9E7B872B932D30149A42706357 /* Pods_AnimatedLaunchScreenKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimatedLaunchScreenKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		993C8A0EEEC25CC6A0C9D91B0BE3E053 /* AnimatedLaunchScreenKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AnimatedLaunchScreenKit-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E1F36B11585314910B16E6C73D40528 /* Pods-AnimatedLaunchScreenKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnimatedLaunchScreenKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A331C453E7C245E6CB77DC66EBFCFD51 /* Pods-AnimatedLaunchScreenKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedLaunchScreenKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A33FABCF13FD1B8DF1692E21A702F1BE /* peeler.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = peeler.png; path = AnimatedLaunchScreenKit/Assets/peeler.png; sourceTree = "<group>"; };
+		A79063F0AB6177CC66D5E22CCC66CED7 /* Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		A928A2CD2061F71B98FCE30650D4E0FD /* Pods-AnimatedLaunchScreenKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AnimatedLaunchScreenKit_Tests.modulemap"; sourceTree = "<group>"; };
+		ADFEB9DBB76664E4E148DF1200843375 /* AnimatedLaunchScreenKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatedLaunchScreenKit.modulemap; sourceTree = "<group>"; };
+		AF1A7DB6D0C25D2580791A31D626BDFB /* saltandpepper.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = saltandpepper.png; path = AnimatedLaunchScreenKit/Assets/saltandpepper.png; sourceTree = "<group>"; };
+		B415CC4CC4405A1B043DC39A2900BA95 /* Pods-AnimatedLaunchScreenKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimatedLaunchScreenKit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B52E3BB43298776800B55B514A4A0E5C /* Pods-AnimatedLaunchScreenKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnimatedLaunchScreenKit_Example-dummy.m"; sourceTree = "<group>"; };
+		B5825A31DA56CCAEC1B741EA042DCEB0 /* fries.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = fries.png; path = AnimatedLaunchScreenKit/Assets/fries.png; sourceTree = "<group>"; };
+		BFA85FB48B87C3B5D68160FE3F3BED7C /* potatuhs.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = potatuhs.png; path = AnimatedLaunchScreenKit/Assets/potatuhs.png; sourceTree = "<group>"; };
+		C2A402C033A179C089C2CC2AE8B65EE9 /* mashed.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = mashed.png; path = AnimatedLaunchScreenKit/Assets/mashed.png; sourceTree = "<group>"; };
+		C70D6C0F78059309FBF336F9035570D5 /* tractor.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = tractor.png; path = AnimatedLaunchScreenKit/Assets/tractor.png; sourceTree = "<group>"; };
+		CB6A9A9738F76E1EFA89E66D87D112BD /* Pods-AnimatedLaunchScreenKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AnimatedLaunchScreenKit_Example.modulemap"; sourceTree = "<group>"; };
+		CC33E8017D66E0CDE005A9B441EF0240 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CC79CE8A333018E9E23E05875EC7B970 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CCC523C9A17858ACCD555102C3FF09C5 /* loadedspud.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = loadedspud.png; path = AnimatedLaunchScreenKit/Assets/loadedspud.png; sourceTree = "<group>"; };
+		CCCCB6C8A36956AC91F0458F56DC7867 /* BackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = AnimatedLaunchScreenKit/Classes/BackgroundView.swift; sourceTree = "<group>"; };
+		D2F7ABE1D7A92FC60A5D5E209C121B02 /* AnimatedLaunchScreenKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatedLaunchScreenKit-dummy.m"; sourceTree = "<group>"; };
+		D7177D5FCEE1FDA0C6DC1D68A0B941DB /* Pods-AnimatedLaunchScreenKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedLaunchScreenKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DDB122A7DA4DD20EA714CB3546C1CD9C /* baked.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = baked.png; path = AnimatedLaunchScreenKit/Assets/baked.png; sourceTree = "<group>"; };
+		DDF9F4E62C1CE8FAFC94298AAE62A0D9 /* Pods-AnimatedLaunchScreenKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnimatedLaunchScreenKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EAA2F4AF061764517D0C9B504FB5EA44 /* cheesewheel.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = cheesewheel.png; path = AnimatedLaunchScreenKit/Assets/cheesewheel.png; sourceTree = "<group>"; };
+		ECFE2D264AB38551BAF4DEC8C43E0140 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F84207FC2D930FB85C8B84DCF02C8787 /* logo.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = logo.png; path = AnimatedLaunchScreenKit/Assets/logo.png; sourceTree = "<group>"; };
+		F8F27D4C72B2FE16294F97882D37C38D /* AnimatedLaunchScreenKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedLaunchScreenKit.release.xcconfig; sourceTree = "<group>"; };
+		FBD6DD94C1ED7EA5CBE996EDD1560B5D /* Pods-AnimatedLaunchScreenKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnimatedLaunchScreenKit_Example-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06FCF843D9E42B3B75C836203E7B8ECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37BCBE9DA1467DC32FDED7D514F91C53 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		405060F9974D91EE0417F79387CFCE64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DF6C758786C09441006871D2A80964 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC362A73C8DC46CEF3D01EF528C0BD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F382F6AE9EE378AD9509D22304E39A1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5E257FC8098742E76CD88CADB3840DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1358AED97B1F6B5778A9C518CD5A89FF /* AnimatedLaunchScreenKit */ = {
+			isa = PBXGroup;
+			children = (
+				CCCCB6C8A36956AC91F0458F56DC7867 /* BackgroundView.swift */,
+				DDB122A7DA4DD20EA714CB3546C1CD9C /* baked.png */,
+				68229FC89E8DD71F97FCAEC43A8E54C9 /* bakedpotato.png */,
+				4FD2D4C9925B6EAB1001F16603A142D1 /* butter.png */,
+				EAA2F4AF061764517D0C9B504FB5EA44 /* cheesewheel.png */,
+				8A554E10A5F66C7DE39149F3A9F216FF /* crispycrisps.png */,
+				7CD01EDE4FEA4CEE9B08F15A8AA8BB36 /* Data.swift */,
+				26ED6F53604CE2A5DBD1CD29C0C0D36D /* droolingpotato.png */,
+				B5825A31DA56CCAEC1B741EA042DCEB0 /* fries.png */,
+				27AB96676ED55E75447DF3777683D95D /* getyourhotpotatoes.png */,
+				41B12A5562CE8295D6191F8A1925F81E /* hashbrown.png */,
+				23F7CBE35F52F6AAF7E80EDF3F493533 /* illhaveuh.png */,
+				CCC523C9A17858ACCD555102C3FF09C5 /* loadedspud.png */,
+				F84207FC2D930FB85C8B84DCF02C8787 /* logo.png */,
+				73E016C225D141651E9301151E2AB029 /* Main.swift */,
+				C2A402C033A179C089C2CC2AE8B65EE9 /* mashed.png */,
+				77EBB5118CE2DC30BF7EEFF3EDBEE2E3 /* masher.png */,
+				A33FABCF13FD1B8DF1692E21A702F1BE /* peeler.png */,
+				939DA66E2FB6D397B5CC202B2BCA46D0 /* potatochip.png */,
+				BFA85FB48B87C3B5D68160FE3F3BED7C /* potatuhs.png */,
+				AF1A7DB6D0C25D2580791A31D626BDFB /* saltandpepper.png */,
+				4461E42C2F4D44555C8EC8E45FAB3A69 /* sheet.png */,
+				1279BEFE2D1152A6E98558149438ED83 /* SlotColumnView.swift */,
+				28778E0A0BBD96170890C68E7CD8CA8F /* smashing-dips.png */,
+				44580126ABB362F77735A08DA93459FB /* sun.png */,
+				C70D6C0F78059309FBF336F9035570D5 /* tractor.png */,
+				01F5F8AC08DEC2147BBF86B2995ECE40 /* truck.png */,
+				0018D33BDAA4CF9C2F762940D75DFCF9 /* whatcani.png */,
+				4594C4AC55CC03D9E48E326B47D31BC1 /* AnimatedLaunchScreen */,
+				44AE5A8A22C22F2C8E22DAD92B59705D /* Pod */,
+				13A2293C1C5B0494BDB4C3C033D14BA1 /* Support Files */,
+			);
+			name = AnimatedLaunchScreenKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		13A2293C1C5B0494BDB4C3C033D14BA1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADFEB9DBB76664E4E148DF1200843375 /* AnimatedLaunchScreenKit.modulemap */,
+				D2F7ABE1D7A92FC60A5D5E209C121B02 /* AnimatedLaunchScreenKit-dummy.m */,
+				993C8A0EEEC25CC6A0C9D91B0BE3E053 /* AnimatedLaunchScreenKit-Info.plist */,
+				37C356652B4304E02762EDEC4D76D81A /* AnimatedLaunchScreenKit-prefix.pch */,
+				75F2689B69B101C89D0A222242D25FEC /* AnimatedLaunchScreenKit-umbrella.h */,
+				29B4D42165C7DC371166B031423557A3 /* AnimatedLaunchScreenKit.debug.xcconfig */,
+				F8F27D4C72B2FE16294F97882D37C38D /* AnimatedLaunchScreenKit.release.xcconfig */,
+				23DF63CD7B0D03EF95863C67D01220D8 /* ResourceBundle-AnimatedLaunchScreenKitAssets-AnimatedLaunchScreenKit-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AnimatedLaunchScreenKit";
+			sourceTree = "<group>";
+		};
+		260E46150725A293BDC31CFBE333FBBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				235BE06AA6EDD7AD2DD8A242D17D179D /* AnimatedLaunchScreenKit.framework */,
+				3C08EE97F83858684DE924062D52EAA8 /* AnimatedLaunchScreenKitAssets.bundle */,
+				95297F9E7B872B932D30149A42706357 /* Pods_AnimatedLaunchScreenKit_Example.framework */,
+				6E81F15F1515F27F52ECEB5DD488F29B /* Pods_AnimatedLaunchScreenKit_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44AE5A8A22C22F2C8E22DAD92B59705D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7EDC0695BA4F00F0B729ABF0C82F5430 /* AnimatedLaunchScreenKit.podspec */,
+				ECFE2D264AB38551BAF4DEC8C43E0140 /* LICENSE */,
+				CC79CE8A333018E9E23E05875EC7B970 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		4594C4AC55CC03D9E48E326B47D31BC1 /* AnimatedLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				85202FF558047E6C560FFE19A8BB3C70 /* Configuration.swift */,
+				A79063F0AB6177CC66D5E22CCC66CED7 /* Defaults.swift */,
+				CC33E8017D66E0CDE005A9B441EF0240 /* Extensions.swift */,
+				61DB9FDB2DDD510200B9BFA9 /* LaunchScreenTiming.swift */,
+				61DB9FD92DDC49F200B9BFA9 /* Logo.swift */,
+			);
+			name = AnimatedLaunchScreen;
+			path = AnimatedLaunchScreenKit/Classes/AnimatedLaunchScreen;
+			sourceTree = "<group>";
+		};
+		5C784E09E3F012C77870566F38EB07DF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				60A453E2DD1ADA10F9F539E6C1A70DE7 /* Pods-AnimatedLaunchScreenKit_Example */,
+				902AFDFBAEB6863C5BE5BA13C579B8E2 /* Pods-AnimatedLaunchScreenKit_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5E8D94EAECA486047D680A02598C1EB9 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1358AED97B1F6B5778A9C518CD5A89FF /* AnimatedLaunchScreenKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		60A453E2DD1ADA10F9F539E6C1A70DE7 /* Pods-AnimatedLaunchScreenKit_Example */ = {
+			isa = PBXGroup;
+			children = (
+				CB6A9A9738F76E1EFA89E66D87D112BD /* Pods-AnimatedLaunchScreenKit_Example.modulemap */,
+				9E1F36B11585314910B16E6C73D40528 /* Pods-AnimatedLaunchScreenKit_Example-acknowledgements.markdown */,
+				2A7F34C3EBB1D4852EDF082F32DA8E4D /* Pods-AnimatedLaunchScreenKit_Example-acknowledgements.plist */,
+				B52E3BB43298776800B55B514A4A0E5C /* Pods-AnimatedLaunchScreenKit_Example-dummy.m */,
+				B415CC4CC4405A1B043DC39A2900BA95 /* Pods-AnimatedLaunchScreenKit_Example-frameworks.sh */,
+				284BE7D29236E135E39C98B49A060B93 /* Pods-AnimatedLaunchScreenKit_Example-Info.plist */,
+				FBD6DD94C1ED7EA5CBE996EDD1560B5D /* Pods-AnimatedLaunchScreenKit_Example-umbrella.h */,
+				51932295E41275382C9B2A1A5591D07D /* Pods-AnimatedLaunchScreenKit_Example.debug.xcconfig */,
+				A331C453E7C245E6CB77DC66EBFCFD51 /* Pods-AnimatedLaunchScreenKit_Example.release.xcconfig */,
+			);
+			name = "Pods-AnimatedLaunchScreenKit_Example";
+			path = "Target Support Files/Pods-AnimatedLaunchScreenKit_Example";
+			sourceTree = "<group>";
+		};
+		902AFDFBAEB6863C5BE5BA13C579B8E2 /* Pods-AnimatedLaunchScreenKit_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A928A2CD2061F71B98FCE30650D4E0FD /* Pods-AnimatedLaunchScreenKit_Tests.modulemap */,
+				DDF9F4E62C1CE8FAFC94298AAE62A0D9 /* Pods-AnimatedLaunchScreenKit_Tests-acknowledgements.markdown */,
+				D7177D5FCEE1FDA0C6DC1D68A0B941DB /* Pods-AnimatedLaunchScreenKit_Tests-acknowledgements.plist */,
+				34DD90609C46FA06FA5C46CD799FFB26 /* Pods-AnimatedLaunchScreenKit_Tests-dummy.m */,
+				8F2B7B010BB6F085EA19405FD9AEE94B /* Pods-AnimatedLaunchScreenKit_Tests-Info.plist */,
+				85A1DA2C4AB96BA119A670E223C251E2 /* Pods-AnimatedLaunchScreenKit_Tests-umbrella.h */,
+				89F33F7E89DB40C4908A168681CC18FB /* Pods-AnimatedLaunchScreenKit_Tests.debug.xcconfig */,
+				6990B97C76DEF3A4E5977E82099F46EB /* Pods-AnimatedLaunchScreenKit_Tests.release.xcconfig */,
+			);
+			name = "Pods-AnimatedLaunchScreenKit_Tests";
+			path = "Target Support Files/Pods-AnimatedLaunchScreenKit_Tests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				5E8D94EAECA486047D680A02598C1EB9 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				260E46150725A293BDC31CFBE333FBBE /* Products */,
+				5C784E09E3F012C77870566F38EB07DF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5842ED07D8908FAC5ED17D47C1E0CEB9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A883AB3B4951C93B7CE2873519392EC /* AnimatedLaunchScreenKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C5366932C308E3A0A8A0DF86D2FA3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BF73EF479B78221E3ED2841C8D7F7D /* Pods-AnimatedLaunchScreenKit_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C68F36C7D0CC7D2100DFC9B8A118AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6A38EF6E10633E1337FBD7BEAC8FB8 /* Pods-AnimatedLaunchScreenKit_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B7A4A4715A92B886E7FE57C045EA0EF /* AnimatedLaunchScreenKit-AnimatedLaunchScreenKitAssets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D11234D7917FAE118E5E63EA9FC9445F /* Build configuration list for PBXNativeTarget "AnimatedLaunchScreenKit-AnimatedLaunchScreenKitAssets" */;
+			buildPhases = (
+				327FDCE606EE0F8444FADD7C6BB37CD0 /* Sources */,
+				EC362A73C8DC46CEF3D01EF528C0BD1C /* Frameworks */,
+				32B35B4C1C2BE371F6B32FEE05043B61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AnimatedLaunchScreenKit-AnimatedLaunchScreenKitAssets";
+			productName = AnimatedLaunchScreenKitAssets;
+			productReference = 3C08EE97F83858684DE924062D52EAA8 /* AnimatedLaunchScreenKitAssets.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8E14B1496BE935DD7CD76866E51E7EF7 /* Pods-AnimatedLaunchScreenKit_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE732C31A4AA05255793E1BB41E8D43B /* Build configuration list for PBXNativeTarget "Pods-AnimatedLaunchScreenKit_Example" */;
+			buildPhases = (
+				92C5366932C308E3A0A8A0DF86D2FA3E /* Headers */,
+				E4A08231A9EFC1E3DE59D8ACAB0A5244 /* Sources */,
+				F382F6AE9EE378AD9509D22304E39A1B /* Frameworks */,
+				F008BE6B60B92FDFD407B20D04889609 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69EEE8A9444931B2FDB301221AA6E8FA /* PBXTargetDependency */,
+			);
+			name = "Pods-AnimatedLaunchScreenKit_Example";
+			productName = Pods_AnimatedLaunchScreenKit_Example;
+			productReference = 95297F9E7B872B932D30149A42706357 /* Pods_AnimatedLaunchScreenKit_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B2173F3322323765862C95E423E9344E /* AnimatedLaunchScreenKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BA156B09AD454BA9E03962530217243 /* Build configuration list for PBXNativeTarget "AnimatedLaunchScreenKit" */;
+			buildPhases = (
+				5842ED07D8908FAC5ED17D47C1E0CEB9 /* Headers */,
+				2BEA3631163DD1E06B0A55469378F3F8 /* Sources */,
+				06FCF843D9E42B3B75C836203E7B8ECF /* Frameworks */,
+				6F67357AAE114845CBDB6B43195D0624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B74C6E8A7824029DED51039EA08B30D /* PBXTargetDependency */,
+			);
+			name = AnimatedLaunchScreenKit;
+			productName = AnimatedLaunchScreenKit;
+			productReference = 235BE06AA6EDD7AD2DD8A242D17D179D /* AnimatedLaunchScreenKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B627D1E8E68EF060DAC5BF44CA6566BB /* Pods-AnimatedLaunchScreenKit_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7282E40070CB7C392FA6AB2D411EF961 /* Build configuration list for PBXNativeTarget "Pods-AnimatedLaunchScreenKit_Tests" */;
+			buildPhases = (
+				B5C68F36C7D0CC7D2100DFC9B8A118AB /* Headers */,
+				A6A5FD1783CF46348759B9EE0D86889D /* Sources */,
+				405060F9974D91EE0417F79387CFCE64 /* Frameworks */,
+				6983913141DE5374FDBD83AC92396597 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CB22BB45F97D5A04DD64FE59B897F7 /* PBXTargetDependency */,
+			);
+			name = "Pods-AnimatedLaunchScreenKit_Tests";
+			productName = Pods_AnimatedLaunchScreenKit_Tests;
+			productReference = 6E81F15F1515F27F52ECEB5DD488F29B /* Pods_AnimatedLaunchScreenKit_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 260E46150725A293BDC31CFBE333FBBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2173F3322323765862C95E423E9344E /* AnimatedLaunchScreenKit */,
+				4B7A4A4715A92B886E7FE57C045EA0EF /* AnimatedLaunchScreenKit-AnimatedLaunchScreenKitAssets */,
+				8E14B1496BE935DD7CD76866E51E7EF7 /* Pods-AnimatedLaunchScreenKit_Example */,
+				B627D1E8E68EF060DAC5BF44CA6566BB /* Pods-AnimatedLaunchScreenKit_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32B35B4C1C2BE371F6B32FEE05043B61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4653F3CA5FE68D01A82DF760A116FB59 /* baked.png in Resources */,
+				25011FE2F3E419FD872C5C2D7752F1EF /* bakedpotato.png in Resources */,
+				ACE9E725A6813F6664656D43D6A8C364 /* butter.png in Resources */,
+				6B1F2CC9576A84494BAA3BFFF0A11CA8 /* cheesewheel.png in Resources */,
+				A8D19F17A194AB44E8E06BA642F6CD43 /* crispycrisps.png in Resources */,
+				A1E8CEE39BC8A8D5937B07BC63FB8048 /* droolingpotato.png in Resources */,
+				0E63BC955224F13ADDF1E98C7F31A640 /* fries.png in Resources */,
+				E83FC71EE4CA301FC9DAC105B790F56B /* getyourhotpotatoes.png in Resources */,
+				3475E6D81EB666EF43D444848EDFA9E4 /* hashbrown.png in Resources */,
+				CCB224BE18B580E2D28D34074AC902C2 /* illhaveuh.png in Resources */,
+				0AE784B590F5E2B525388F9EDCE71845 /* loadedspud.png in Resources */,
+				FCE62E5A76F19EEDD93D15C06E752E65 /* logo.png in Resources */,
+				71105D1C53CD473F0EA6AC8E2D1C4442 /* mashed.png in Resources */,
+				5834FCFF40EEA90C4900B605343415D4 /* masher.png in Resources */,
+				FF55A1AAEF91BBE2535753BAA0B7BC3B /* peeler.png in Resources */,
+				F2DF42C00C41C1D1D74D8CB48780062D /* potatochip.png in Resources */,
+				2CD333FA9F411724392D838A593F9090 /* potatuhs.png in Resources */,
+				ED9F367414B161816B8351B7785E36EF /* saltandpepper.png in Resources */,
+				CAABA5768B7DCCD3B61119F2D0113025 /* sheet.png in Resources */,
+				5792BA35F06C41C636C63F19CF2D6CEE /* smashing-dips.png in Resources */,
+				0FFA0A786E6D2BD1B1B5995007DDF68D /* sun.png in Resources */,
+				77555FC5523862FD03BDB72D3220EEA6 /* tractor.png in Resources */,
+				E3A14A36AA3A5CE3D5D62C048E174FDE /* truck.png in Resources */,
+				CBE9F4839A3653502EB58E528B5EEF38 /* whatcani.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6983913141DE5374FDBD83AC92396597 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F67357AAE114845CBDB6B43195D0624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F73D0B26C3B502893B3D64FF4E02D17 /* AnimatedLaunchScreenKitAssets.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F008BE6B60B92FDFD407B20D04889609 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BEA3631163DD1E06B0A55469378F3F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61DB9FDC2DDD510200B9BFA9 /* LaunchScreenTiming.swift in Sources */,
+				4CCEEBCF5AD8D5AEB1645B95AC1EAEBD /* AnimatedLaunchScreenKit-dummy.m in Sources */,
+				A7E0EBF6D509C6E9FA8FFFD7CC6372C7 /* BackgroundView.swift in Sources */,
+				99E1339EF660F835B59647C1E7854238 /* Configuration.swift in Sources */,
+				011C6D04A7AAE4D75F5B688CCF496E61 /* Data.swift in Sources */,
+				61DB9FDA2DDC49F200B9BFA9 /* Logo.swift in Sources */,
+				2CDF8758B98707674DB36F0816B02216 /* Defaults.swift in Sources */,
+				08B9481C98AEF64EF27C7D9E0746FF36 /* Extensions.swift in Sources */,
+				102EFA7C9AEF00C5CF5DF604A07C5678 /* Main.swift in Sources */,
+				0EF4580BA7B2E8EB78CD2D1B7EC31B5D /* SlotColumnView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		327FDCE606EE0F8444FADD7C6BB37CD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6A5FD1783CF46348759B9EE0D86889D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107CD942ABCC4C50C4F75EE900C7E0F3 /* Pods-AnimatedLaunchScreenKit_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4A08231A9EFC1E3DE59D8ACAB0A5244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA5E45567050C06D315657563797D9D /* Pods-AnimatedLaunchScreenKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CB22BB45F97D5A04DD64FE59B897F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AnimatedLaunchScreenKit_Example";
+			target = 8E14B1496BE935DD7CD76866E51E7EF7 /* Pods-AnimatedLaunchScreenKit_Example */;
+			targetProxy = A79E78873348707B9815E31D90B8160E /* PBXContainerItemProxy */;
+		};
+		69EEE8A9444931B2FDB301221AA6E8FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnimatedLaunchScreenKit;
+			target = B2173F3322323765862C95E423E9344E /* AnimatedLaunchScreenKit */;
+			targetProxy = 56BFE752130E7F5208B025A728D4279D /* PBXContainerItemProxy */;
+		};
+		9B74C6E8A7824029DED51039EA08B30D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AnimatedLaunchScreenKit-AnimatedLaunchScreenKitAssets";
+			target = 4B7A4A4715A92B886E7FE57C045EA0EF /* AnimatedLaunchScreenKit-AnimatedLaunchScreenKitAssets */;
+			targetProxy = 0D23739A91AE68ED2424F27F47CF6732 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14F90E8C62CC2695744C164266A39D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8F27D4C72B2FE16294F97882D37C38D /* AnimatedLaunchScreenKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AnimatedLaunchScreenKit/AnimatedLaunchScreenKit-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/AnimatedLaunchScreenKit/AnimatedLaunchScreenKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AnimatedLaunchScreenKit/AnimatedLaunchScreenKit.modulemap";
+				PRODUCT_MODULE_NAME = AnimatedLaunchScreenKit;
+				PRODUCT_NAME = AnimatedLaunchScreenKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1BFFF1682AA8F5EB60CB72AB7F9F72C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6990B97C76DEF3A4E5977E82099F46EB /* Pods-AnimatedLaunchScreenKit_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AnimatedLaunchScreenKit_Tests/Pods-AnimatedLaunchScreenKit_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnimatedLaunchScreenKit_Tests/Pods-AnimatedLaunchScreenKit_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A87BDDBB7B9B4A0C975CC57EBB53893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8F27D4C72B2FE16294F97882D37C38D /* AnimatedLaunchScreenKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AnimatedLaunchScreenKit";
+				IBSC_MODULE = AnimatedLaunchScreenKit;
+				INFOPLIST_FILE = "Target Support Files/AnimatedLaunchScreenKit/ResourceBundle-AnimatedLaunchScreenKitAssets-AnimatedLaunchScreenKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = AnimatedLaunchScreenKitAssets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		95FD5E67334ED616C45B186E090E41E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A331C453E7C245E6CB77DC66EBFCFD51 /* Pods-AnimatedLaunchScreenKit_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AnimatedLaunchScreenKit_Example/Pods-AnimatedLaunchScreenKit_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnimatedLaunchScreenKit_Example/Pods-AnimatedLaunchScreenKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C8DA1A7565A60D578FA9D967ED950DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89F33F7E89DB40C4908A168681CC18FB /* Pods-AnimatedLaunchScreenKit_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AnimatedLaunchScreenKit_Tests/Pods-AnimatedLaunchScreenKit_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnimatedLaunchScreenKit_Tests/Pods-AnimatedLaunchScreenKit_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB2B82F0FEBE0602801B8F092F29CFCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B4D42165C7DC371166B031423557A3 /* AnimatedLaunchScreenKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AnimatedLaunchScreenKit";
+				IBSC_MODULE = AnimatedLaunchScreenKit;
+				INFOPLIST_FILE = "Target Support Files/AnimatedLaunchScreenKit/ResourceBundle-AnimatedLaunchScreenKitAssets-AnimatedLaunchScreenKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = AnimatedLaunchScreenKitAssets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EF64B94B3F3A7EEA034C578DA1283DC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B4D42165C7DC371166B031423557A3 /* AnimatedLaunchScreenKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AnimatedLaunchScreenKit/AnimatedLaunchScreenKit-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/AnimatedLaunchScreenKit/AnimatedLaunchScreenKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AnimatedLaunchScreenKit/AnimatedLaunchScreenKit.modulemap";
+				PRODUCT_MODULE_NAME = AnimatedLaunchScreenKit;
+				PRODUCT_NAME = AnimatedLaunchScreenKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F42199FF0924365E94315727862EDAC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51932295E41275382C9B2A1A5591D07D /* Pods-AnimatedLaunchScreenKit_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AnimatedLaunchScreenKit_Example/Pods-AnimatedLaunchScreenKit_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnimatedLaunchScreenKit_Example/Pods-AnimatedLaunchScreenKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BA156B09AD454BA9E03962530217243 /* Build configuration list for PBXNativeTarget "AnimatedLaunchScreenKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF64B94B3F3A7EEA034C578DA1283DC5 /* Debug */,
+				14F90E8C62CC2695744C164266A39D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7282E40070CB7C392FA6AB2D411EF961 /* Build configuration list for PBXNativeTarget "Pods-AnimatedLaunchScreenKit_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8DA1A7565A60D578FA9D967ED950DFA /* Debug */,
+				1BFFF1682AA8F5EB60CB72AB7F9F72C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE732C31A4AA05255793E1BB41E8D43B /* Build configuration list for PBXNativeTarget "Pods-AnimatedLaunchScreenKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F42199FF0924365E94315727862EDAC3 /* Debug */,
+				95FD5E67334ED616C45B186E090E41E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D11234D7917FAE118E5E63EA9FC9445F /* Build configuration list for PBXNativeTarget "AnimatedLaunchScreenKit-AnimatedLaunchScreenKitAssets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB2B82F0FEBE0602801B8F092F29CFCE /* Debug */,
+				5A87BDDBB7B9B4A0C975CC57EBB53893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

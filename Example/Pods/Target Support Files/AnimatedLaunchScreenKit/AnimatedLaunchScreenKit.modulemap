@@ -1,0 +1,6 @@
+framework module AnimatedLaunchScreenKit {
+  umbrella header "AnimatedLaunchScreenKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

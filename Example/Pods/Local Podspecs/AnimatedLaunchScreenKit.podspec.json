@@ -1,0 +1,27 @@
+{
+  "name": "AnimatedLaunchScreenKit",
+  "version": "0.1.0",
+  "summary": "A short description of AnimatedLaunchScreenKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/owersbrett/AnimatedLaunchScreenKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "owersbrett": "owersbrett@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/owersbrett/AnimatedLaunchScreenKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "AnimatedLaunchScreenKit/Classes/**/*",
+  "resource_bundles": {
+    "AnimatedLaunchScreenKitAssets": [
+      "AnimatedLaunchScreenKit/Assets/*"
+    ]
+  }
+}

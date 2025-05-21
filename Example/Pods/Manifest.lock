@@ -1,0 +1,16 @@
+PODS:
+  - AnimatedLaunchScreenKit (0.1.0)
+
+DEPENDENCIES:
+  - AnimatedLaunchScreenKit (from `../`)
+
+EXTERNAL SOURCES:
+  AnimatedLaunchScreenKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AnimatedLaunchScreenKit: 5d88498447bec3068d750d4b31a00964a6fa6554
+
+PODFILE CHECKSUM: eecc55975a74d588f87247608009c7ed8a70de90
+
+COCOAPODS: 1.16.2
