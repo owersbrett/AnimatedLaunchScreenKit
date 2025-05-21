@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AnimatedLaunchScreenKit: 942b6ac2210964bbd3ae9641e676875a951ccb7f
+  AnimatedLaunchScreenKit: a7e590fc0fea9304d773bdaea6526486c85ba8bd
 
 PODFILE CHECKSUM: eecc55975a74d588f87247608009c7ed8a70de90
 

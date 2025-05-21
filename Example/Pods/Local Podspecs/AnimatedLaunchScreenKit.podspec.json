@@ -24,7 +24,7 @@
   "source_files": "AnimatedLaunchScreenKit/Classes/**/*",
   "resource_bundles": {
     "AnimatedLaunchScreenKitAssets": [
-      "AnimatedLaunchScreenKit/Assets/*"
+      "AnimatedLaunchScreenKit/Assets/**/*"
     ]
   },
   "swift_version": "6.0"

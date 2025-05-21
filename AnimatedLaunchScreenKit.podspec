@@ -27,7 +27,7 @@ experience for iOS apps using slot-style visuals, custom logos, and timing contr
   s.source_files = 'AnimatedLaunchScreenKit/Classes/**/*'
   
   s.resource_bundles = {
-    'AnimatedLaunchScreenKitAssets' => ['AnimatedLaunchScreenKit/Assets/*']
+    'AnimatedLaunchScreenKitAssets' => ['AnimatedLaunchScreenKit/Assets/**/*']
   }
 
 

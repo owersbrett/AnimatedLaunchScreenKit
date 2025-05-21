@@ -48,11 +48,6 @@ public class BackgroundView: UIView {
             let columnView = SlotColumnView(images: columnImages, scrollDirection: direction)
             columnViews.append(columnView)
             stackView.addArrangedSubview(columnView)
-            
-            print("Column \(index) asset count: \(columnImages.count)")
-            for (i, image) in columnImages.enumerated() {
-                print("  - Image \(i): size = \(image.size)")
-            }
         }
     }
 

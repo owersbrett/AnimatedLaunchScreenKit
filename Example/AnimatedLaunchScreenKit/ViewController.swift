@@ -16,9 +16,6 @@ public class ExampleViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = DEFAULT_HPG_CONFIGURATION.cardColor
-        print("view.frame: \(view.frame)")
-        print("UIScreen.main.bounds: \(UIScreen.main.bounds)")
-
         let label = UILabel()
         label.text = "Main App Screen"
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
