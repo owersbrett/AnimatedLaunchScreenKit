@@ -77,7 +77,7 @@ class BounceLogoView: UIView {
         // Reset to initial size
         logoImageView.transform = CGAffineTransform(scaleX: initialSizeScale, y: initialSizeScale)
         
-        // First animate to slightly larger than final size
+        // First bounce animation
         UIView.animate(withDuration: growthDuration,
                        delay: delay,
                        usingSpringWithDamping: growthDamping,
@@ -88,7 +88,7 @@ class BounceLogoView: UIView {
             self.logoImageView.transform = CGAffineTransform(scaleX: self.overshotSizeMultiplier,
                                                           y: self.overshotSizeMultiplier)
         }, completion: { _ in
-            // Then settle back to final size
+            // First settle back to final size
             UIView.animate(withDuration: self.settlingDuration,
                            delay: 0,
                            usingSpringWithDamping: self.settlingDamping,
@@ -98,7 +98,30 @@ class BounceLogoView: UIView {
                 // Final size (100%)
                 self.logoImageView.transform = .identity
             }, completion: { _ in
-                completion?()
+                // Second bounce after 1 second delay
+                UIView.animate(withDuration: self.growthDuration,
+                               delay: 1.5, // 1 second delay
+                               usingSpringWithDamping: self.growthDamping,
+                               initialSpringVelocity: self.growthVelocity,
+                               options: [],
+                               animations: {
+                    // Second overshoot
+                    self.logoImageView.transform = CGAffineTransform(scaleX: self.overshotSizeMultiplier,
+                                                                  y: self.overshotSizeMultiplier)
+                }, completion: { _ in
+                    // Final settle
+                    UIView.animate(withDuration: self.settlingDuration,
+                                   delay: 0,
+                                   usingSpringWithDamping: self.settlingDamping,
+                                   initialSpringVelocity: 0,
+                                   options: [],
+                                   animations: {
+                        // Back to final size
+                        self.logoImageView.transform = .identity
+                    }, completion: { _ in
+                        completion?()
+                    })
+                })
             })
         })
     }
