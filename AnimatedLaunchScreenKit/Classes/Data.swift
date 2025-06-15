@@ -28,7 +28,7 @@ public class HPGAssets {
     public static var columnTwo: [UIImage] {
         return [
             .saltandpepper, .potatuhs, .droolingpotato, .whatcani, .truck, .illhaveuh, .sun, .getyourhotpotatoes,
-            .mashed, .crispycrisps, .baked, .butter, .potatuhs, .peeler, .whatcani
+            .mashed, .crispycrisps, .butter, .potatuhs, .peeler, .whatcani
             
         ].compactMap { image(for: $0) }
     }
