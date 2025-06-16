@@ -66,7 +66,7 @@ public class SlotColumnView: UIView {
         imageViews.removeAll()
         
         // Create five sets of images for smoother looping
-        let repeatedImages = images + images + images + images + images
+        let repeatedImages = images
         
         // Set up a vertical stack of images
         var lastImageView: UIImageView?
