@@ -78,7 +78,10 @@ public class AnimatedLaunchScreenViewController: UIViewController {
         }
     }
     
-    private func complete(){
+    private func complete() {
+        // Stop all animations before transitioning
+        backgroundView.stopAll()
+        
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             let snapshot = self.view.snapshotView(afterScreenUpdates: true)
             if let snapshot = snapshot {

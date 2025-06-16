@@ -70,8 +70,5 @@ public class BackgroundView: UIView {
         columnViews.forEach { $0.stopScrolling() }
     }
 
-    // Also, consider adding this to ensure cleanup:
-    deinit {
-        stopAll()
-    }
+    
 }
