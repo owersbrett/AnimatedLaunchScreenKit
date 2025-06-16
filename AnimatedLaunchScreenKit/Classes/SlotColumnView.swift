@@ -65,8 +65,8 @@ public class SlotColumnView: UIView {
         imageViews.forEach { $0.removeFromSuperview() }
         imageViews.removeAll()
         
-        // Create three sets of images for smoother looping
-        let repeatedImages = images + images + images
+        // Create five sets of images for smoother looping
+        let repeatedImages = images + images + images + images + images
         
         // Set up a vertical stack of images
         var lastImageView: UIImageView?
@@ -151,34 +151,6 @@ public class SlotColumnView: UIView {
         // Update scroll position
         let newY = scrollView.contentOffset.y + (distance * direction)
         scrollView.contentOffset = CGPoint(x: 0, y: newY)
-        
-        // Check if we need to reset position for infinite scroll
-        checkAndResetScrollPosition()
-    }
-    
-    private func checkAndResetScrollPosition() {
-        let contentHeight = scrollView.contentSize.height
-        let oneThirdHeight = contentHeight / 3
-        
-        // If we've scrolled past the bounds, reset to maintain infinite scroll
-        if scrollDirection == .up {
-            if scrollView.contentOffset.y <= 0 {
-                // Jump forward by one third
-                scrollView.contentOffset.y += oneThirdHeight
-            }
-        } else {
-            if scrollView.contentOffset.y >= contentHeight - scrollView.bounds.height {
-                // Jump back by one third
-                scrollView.contentOffset.y -= oneThirdHeight
-            }
-        }
-        
-        // Additional check for the middle position
-        if scrollView.contentOffset.y < oneThirdHeight * 0.5 {
-            scrollView.contentOffset.y += oneThirdHeight
-        } else if scrollView.contentOffset.y > oneThirdHeight * 2.5 {
-            scrollView.contentOffset.y -= oneThirdHeight
-        }
     }
 
     public func stopScrolling() {
