@@ -12,6 +12,7 @@ public class BackgroundView: UIView {
         setupStackView()
         createColumns()
     }
+    
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -63,7 +64,14 @@ public class BackgroundView: UIView {
         return []
     }
 
+    // Add this updated method to your BackgroundView class:
+
     public func stopAll() {
-//        getScrollViews()?.forEach { $0.stopScrolling() }
+        columnViews.forEach { $0.stopScrolling() }
+    }
+
+    // Also, consider adding this to ensure cleanup:
+    deinit {
+        stopAll()
     }
 }

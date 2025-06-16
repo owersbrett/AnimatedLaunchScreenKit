@@ -1,25 +1,12 @@
 import UIKit
 
-//mainView) {
-//    
-//
-//    // Fully reset the window's rootViewController on the main thread
-//    DispatchQueue.main.async {
-//        UIView.transition(with: self.window!,
-//                          duration: 0.4,
-//                          options: [.transitionCrossDissolve],
-//                          animations: {
-//                              self.window?.rootViewController = mainVC
-//                          })
-//    }
-//}
 public class AnimatedLaunchScreenViewController: UIViewController {
     private let configuration: AnimatedLaunchScreenConfiguration
     private var backgroundView: BackgroundView!
     private var logoView: BounceLogoView!
     private var homeViewController: UIViewController!
     
-    // Add a configurable duration for the entire launch sequence
+
     private var totalDuration: TimeInterval {
         configuration.animationDurations.totalDuration
     }
