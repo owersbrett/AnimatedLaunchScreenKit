@@ -82,8 +82,8 @@ public class AnimatedLaunchScreenViewController: UIViewController {
         // Stop all animations before transitioning
         backgroundView.stopAll()
         
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            let snapshot = self.view.snapshotView(afterScreenUpdates: true)
+        DispatchQueue.main.async {  // Changed from asyncAfter(deadline: .now())
+            let snapshot = self.view.snapshotView(afterScreenUpdates: false)  // Changed from true
             if let snapshot = snapshot {
                 snapshot.frame = self.view.frame
                 self.view.addSubview(snapshot)
@@ -100,7 +100,6 @@ public class AnimatedLaunchScreenViewController: UIViewController {
                               })
         }
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
