@@ -86,10 +86,10 @@ public class BackgroundView: UIView {
     // Add this method to prepare for deallocation
     public func prepareForDeallocation() {
         isBeingDeallocated = true
-        stopAll()
         
-        // Prepare each column for deallocation
+        // Stop all columns - since stopScrolling is now nonisolated, this is safe
         for column in columnViews {
+            column.stopScrolling()
             column.prepareForDeallocation()
         }
     }
