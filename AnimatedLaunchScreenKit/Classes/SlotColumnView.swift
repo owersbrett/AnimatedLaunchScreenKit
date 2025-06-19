@@ -21,6 +21,9 @@ public class SlotColumnView: UIView {
     private var startTime: CFTimeInterval = 0
     private var lastTime: CFTimeInterval = 0
     
+    // Add this flag to prevent operations after deallocation starts
+    private var isBeingDeallocated = false
+    
     public init(images: [UIImage], scrollDirection: ScrollDirection) {
         self.images = images
         self.scrollDirection = scrollDirection
@@ -32,13 +35,19 @@ public class SlotColumnView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    deinit {
+        // Critical: Stop everything before deallocation
+        isBeingDeallocated = true
+        stopScrolling()
+    }
 
     private func setupScrollView() {
         scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.isUserInteractionEnabled = false // Prevent user interaction during animation
+        scrollView.isUserInteractionEnabled = false
         
         contentView = UIView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,31 +70,33 @@ public class SlotColumnView: UIView {
     }
     
     private func setupImageViews() {
-        // Remove existing image views
-        imageViews.forEach { $0.removeFromSuperview() }
+        // Safety check
+        guard !isBeingDeallocated else { return }
+        
+        // Remove existing image views safely
+        imageViews.forEach { imageView in
+            imageView.removeFromSuperview()
+        }
         imageViews.removeAll()
         
-        // Create five sets of images for smoother looping
         let repeatedImages = images
-        
-        // Set up a vertical stack of images
         var lastImageView: UIImageView?
         
         for image in repeatedImages {
+            guard !isBeingDeallocated else { return }
+            
             let imageView = UIImageView(image: image)
             imageView.contentMode = .scaleAspectFit
             imageView.translatesAutoresizingMaskIntoConstraints = false
             
             contentView.addSubview(imageView)
             
-            // Constrain width to fill container
             NSLayoutConstraint.activate([
                 imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
                 imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
                 imageView.heightAnchor.constraint(equalToConstant: imageHeight)
             ])
             
-            // Position vertically
             if let lastImageView = lastImageView {
                 imageView.topAnchor.constraint(equalTo: lastImageView.bottomAnchor).isActive = true
             } else {
@@ -96,7 +107,6 @@ public class SlotColumnView: UIView {
             imageViews.append(imageView)
         }
         
-        // Set the bottom constraint for the content view
         if let lastImageView = lastImageView {
             lastImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         }
@@ -105,14 +115,12 @@ public class SlotColumnView: UIView {
     override public func layoutSubviews() {
         super.layoutSubviews()
         
-        // Only update if we have valid bounds
-        guard bounds.size.height > 0 else { return }
+        // Safety checks
+        guard !isBeingDeallocated, bounds.size.height > 0 else { return }
         
-        // Update content size after layout
         let contentHeight = CGFloat(imageViews.count) * imageHeight
         scrollView.contentSize = CGSize(width: bounds.width, height: contentHeight)
         
-        // Position in the middle third to allow seamless scrolling
         if !isScrolling {
             let oneThirdHeight = contentHeight / 3
             scrollView.contentOffset = CGPoint(x: 0, y: oneThirdHeight)
@@ -120,35 +128,36 @@ public class SlotColumnView: UIView {
     }
 
     public func startScrolling(delay: TimeInterval, duration: TimeInterval) {
-        guard !isScrolling else { return }
+        guard !isScrolling, !isBeingDeallocated else { return }
         
-        // Calculate scroll speed (pixels per second)
         pixelsPerSecond = imageHeight / CGFloat(duration)
         
-        // Delay the start
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-            guard let self = self else { return }
+            guard let self = self, !self.isBeingDeallocated else { return }
             
             self.isScrolling = true
             self.startTime = CACurrentMediaTime()
             self.lastTime = self.startTime
             
-            // Create and start display link
             self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateScroll))
             self.displayLink?.add(to: .main, forMode: .common)
         }
     }
     
     @objc private func updateScroll(displayLink: CADisplayLink) {
+        // Critical safety check
+        guard !isBeingDeallocated, isScrolling else {
+            stopScrolling()
+            return
+        }
+        
         let currentTime = displayLink.timestamp
         let deltaTime = currentTime - lastTime
         lastTime = currentTime
         
-        // Calculate distance to move
         let distance = pixelsPerSecond * CGFloat(deltaTime)
         let direction: CGFloat = scrollDirection == .down ? 1 : -1
         
-        // Update scroll position
         let newY = scrollView.contentOffset.y + (distance * direction)
         scrollView.contentOffset = CGPoint(x: 0, y: newY)
     }
@@ -157,5 +166,11 @@ public class SlotColumnView: UIView {
         isScrolling = false
         displayLink?.invalidate()
         displayLink = nil
+    }
+    
+    // Add this method to be called before view controller transitions
+    public func prepareForDeallocation() {
+        isBeingDeallocated = true
+        stopScrolling()
     }
 }

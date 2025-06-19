@@ -5,8 +5,8 @@ public class AnimatedLaunchScreenViewController: UIViewController {
     private var backgroundView: BackgroundView!
     private var logoView: BounceLogoView!
     private var homeViewController: UIViewController!
+    private var hasCompleted = false // Prevent multiple completions
     
-
     private var totalDuration: TimeInterval {
         configuration.animationDurations.totalDuration
     }
@@ -20,19 +20,33 @@ public class AnimatedLaunchScreenViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = configuration.backgroundColor
-        setupLogoView() // Create the logo view first (will be behind background)
-        setupBackgroundView() // Add background view on top
-        runLaunchSequence() // Start the animations
+        setupLogoView()
+        setupBackgroundView()
+        runLaunchSequence()
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Stop all animations when view is about to disappear
+        cleanup()
+    }
+    
+    deinit {
+        // Ensure cleanup happens
+        cleanup()
+    }
+    
+    private func cleanup() {
+        backgroundView?.stopAll()
+        backgroundView?.prepareForDeallocation()
     }
     
     private func setupLogoView() {
-        // Create the logo view
         logoView = BounceLogoView()
         logoView.layer.zPosition = 5
         logoView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoView)
         
-        // Position the logo - adjust constraints as needed for your design
         NSLayoutConstraint.activate([
             logoView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -55,43 +69,37 @@ public class AnimatedLaunchScreenViewController: UIViewController {
     }
     
     private func runLaunchSequence() {
-        // Start the background scrolling immediately
         backgroundView.runPhaseOne()
         
-        // Add the logo bounce animation after a slight delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            guard let self = self, !self.hasCompleted else { return }
             self.logoView.animateBounceIn(delay: 0.1)
         }
         
-        // Set up the completion to run after the total duration
-        DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration) {
-            // Take a snapshot to freeze the animation state
-            let snapshot = self.view.snapshotView(afterScreenUpdates: true)
-            if let snapshot = snapshot {
-                snapshot.frame = self.view.frame
-                self.view.addSubview(snapshot)
-                self.complete()
-
-            } else {
-                self.complete()
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration) { [weak self] in
+            self?.complete()
         }
     }
     
     private func complete() {
-        // Stop all animations before transitioning
-        backgroundView.stopAll()
+        // Prevent multiple calls
+        guard !hasCompleted else { return }
+        hasCompleted = true
         
-        DispatchQueue.main.async {  // Changed from asyncAfter(deadline: .now())
-            let snapshot = self.view.snapshotView(afterScreenUpdates: false)  // Changed from true
-            if let snapshot = snapshot {
-                snapshot.frame = self.view.frame
-                self.view.addSubview(snapshot)
+        // Stop all animations FIRST
+        cleanup()
+        
+        // Small delay to ensure cleanup completes
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            guard let self = self else { return }
+            
+            // Get the window safely
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                  let window = windowScene.windows.first else {
+                return
             }
-
-            // Transition rootViewController
-            guard let window = UIApplication.shared.delegate?.window ?? nil else { return }
-
+            
+            // Perform transition
             UIView.transition(with: window,
                               duration: 0.4,
                               options: [.transitionCrossDissolve],
@@ -100,6 +108,7 @@ public class AnimatedLaunchScreenViewController: UIViewController {
                               })
         }
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
