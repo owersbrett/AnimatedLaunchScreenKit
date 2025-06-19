@@ -39,7 +39,10 @@ public class SlotColumnView: UIView {
     deinit {
         // Critical: Stop everything before deallocation
         isBeingDeallocated = true
-        stopScrolling()
+        // Synchronously stop the display link since deinit must be sync
+        displayLink?.invalidate()
+        displayLink = nil
+        isScrolling = false
     }
 
     private func setupScrollView() {
@@ -166,6 +169,12 @@ public class SlotColumnView: UIView {
         isScrolling = false
         displayLink?.invalidate()
         displayLink = nil
+    }
+    
+    // Add a main-actor version for when called from UI contexts
+    @MainActor
+    public func stopScrollingOnMainActor() {
+        stopScrolling()
     }
     
     // Add this method to be called before view controller transitions

@@ -16,7 +16,8 @@ public class BackgroundView: UIView {
     
     deinit {
         isBeingDeallocated = true
-        stopAll()
+        // For deinit, we need to stop things synchronously
+        // The individual column deinits will handle their own cleanup
     }
 
     required init?(coder: NSCoder) {
