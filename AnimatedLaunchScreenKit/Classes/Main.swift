@@ -31,11 +31,6 @@ public class AnimatedLaunchScreenViewController: UIViewController {
         cleanup()
     }
     
-    deinit {
-        // For deinit, we need synchronous cleanup
-        // The individual views will handle their own cleanup in their deinits
-        backgroundView?.prepareForDeallocation()
-    }
     
     @MainActor
     private func cleanup() {

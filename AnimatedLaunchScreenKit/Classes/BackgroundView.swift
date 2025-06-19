@@ -14,11 +14,6 @@ public class BackgroundView: UIView {
         createColumns()
     }
     
-    deinit {
-        isBeingDeallocated = true
-        // For deinit, we need to stop things synchronously
-        // The individual column deinits will handle their own cleanup
-    }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

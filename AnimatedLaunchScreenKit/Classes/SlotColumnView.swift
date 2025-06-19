@@ -37,9 +37,7 @@ public class SlotColumnView: UIView {
     }
     
     deinit {
-        // Critical: Stop everything before deallocation
-        isBeingDeallocated = true
-        // Synchronously stop the display link since deinit must be sync
+        // Simple sync cleanup - no main actor needed
         displayLink?.invalidate()
         displayLink = nil
         isScrolling = false
