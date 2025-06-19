@@ -36,12 +36,6 @@ public class SlotColumnView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        // Simple sync cleanup - no main actor needed
-        displayLink?.invalidate()
-        displayLink = nil
-        isScrolling = false
-    }
 
     private func setupScrollView() {
         scrollView = UIScrollView()
