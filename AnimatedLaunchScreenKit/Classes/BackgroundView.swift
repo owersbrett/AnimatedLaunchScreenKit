@@ -67,19 +67,22 @@ public class BackgroundView: UIView {
         }
         
         // Create single display link to drive all animations
-        displayLink = CADisplayLink(target: self, selector: #selector(updateAllColumns))
+        displayLink = CADisplayLink(target: WeakProxy(target: self, selector: #selector(updateAllColumns)), selector: #selector(WeakProxy.forward(_:)))
         displayLink?.add(to: .main, forMode: .common)
+
     }
-    
     @objc private func updateAllColumns() {
-        guard !isBeingDeallocated else {
-            stopAll()
+        // Exit early if cleanup has started
+        if isBeingDeallocated {
             return
         }
-        
+
         let currentTime = CACurrentMediaTime()
-        
-        for column in columnViews {
+
+        // Copy columnViews to avoid mutation crash
+        let columnsSnapshot = columnViews
+
+        for column in columnsSnapshot {
             column.updateAnimation(currentTime: currentTime)
         }
     }
@@ -88,13 +91,30 @@ public class BackgroundView: UIView {
         displayLink?.invalidate()
         displayLink = nil
     }
-    
+
     public func prepareForDeallocation() {
+        stopAll() // 🛑 Make sure display link is stopped first
         isBeingDeallocated = true
-        stopAll()
-        
-        for column in columnViews {
-            column.prepareForDeallocation()
+        columnViews.removeAll() // Mutating array safely after stop
+    }
+
+}
+
+final class WeakProxy {
+    weak var target: AnyObject?
+    let selector: Selector
+
+    init(target: AnyObject, selector: Selector) {
+        self.target = target
+        self.selector = selector
+    }
+
+    @objc func forward(_ displayLink: CADisplayLink) {
+        guard let target = target else {
+            displayLink.invalidate()
+            return
         }
+
+        _ = target.perform(selector, with: displayLink)
     }
 }
