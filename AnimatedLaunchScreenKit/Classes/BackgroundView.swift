@@ -6,7 +6,11 @@ public class BackgroundView: UIView {
     private var stackView: UIStackView!
     private var columnViews: [SlotColumnView] = []
     private var isBeingDeallocated = false
-
+    
+    // Single display link for all animations
+    private var displayLink: CADisplayLink?
+    private var animationStartTime: CFTimeInterval = 0
+    
     public init(configuration: AnimatedLaunchScreenConfiguration) {
         self.config = configuration
         super.init(frame: .zero)
@@ -58,13 +62,16 @@ public class BackgroundView: UIView {
     public func runPhaseOne() {
         guard !isBeingDeallocated else { return }
         
-        // Use enumerated().forEach safely
+        // Start all columns with their delays, but don't let them create their own display links
         for (index, column) in columnViews.enumerated() {
-            guard !isBeingDeallocated else { break }
-            
             let delay = Double(index) * 0.05
-            column.startScrolling(delay: delay, duration: config.animationDurations.spinDuration)
+            column.prepareForAnimation(delay: delay, duration: config.animationDurations.spinDuration)
         }
+        
+        // Create single display link
+        animationStartTime = CACurrentMediaTime()
+        displayLink = CADisplayLink(target: self, selector: #selector(updateAllColumns))
+        displayLink?.add(to: .main, forMode: .common)
     }
     
     func getScrollViews() -> [UIScrollView]? {
@@ -88,4 +95,13 @@ public class BackgroundView: UIView {
             column.prepareForDeallocation()
         }
     }
+    
+    @objc private func updateAllColumns() {
+        let currentTime = CACurrentMediaTime()
+        
+        for column in columnViews {
+            column.updateAnimation(currentTime: currentTime)
+        }
+    }
+
 }

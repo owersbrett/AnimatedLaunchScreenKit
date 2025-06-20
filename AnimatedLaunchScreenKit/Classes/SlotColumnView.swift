@@ -14,12 +14,15 @@ public class SlotColumnView: UIView {
     private var contentView: UIView!
     private var imageViews: [UIImageView] = []
     private var isScrolling = false
-    private var displayLink: CADisplayLink?
     
     private var imageHeight: CGFloat = 60
     private var pixelsPerSecond: CGFloat = 0
-    private var startTime: CFTimeInterval = 0
-    private var lastTime: CFTimeInterval = 0
+    
+    // Add these new properties at the top with your other properties
+    private var animationDelay: TimeInterval = 0
+    private var animationStartTime: CFTimeInterval = 0
+
+    
     
     // Add this flag to prevent operations after deallocation starts
     private var isBeingDeallocated = false
@@ -30,6 +33,24 @@ public class SlotColumnView: UIView {
         super.init(frame: .zero)
         setupScrollView()
         setupImageViews()
+    }
+    // Remove displayLink property and use external timing
+    public func prepareForAnimation(delay: TimeInterval, duration: TimeInterval) {
+        self.animationDelay = delay
+        self.pixelsPerSecond = imageHeight / CGFloat(duration)
+        self.animationStartTime = CACurrentMediaTime()
+    }
+
+    public func updateAnimation(currentTime: CFTimeInterval) {
+        // Only animate if enough time has passed for this column's delay
+        let elapsed = currentTime - animationStartTime
+        guard elapsed >= animationDelay else { return }
+        
+        // Your existing scroll update logic here
+        let distance = pixelsPerSecond * CGFloat(1.0/60.0) // 60fps
+        let direction: CGFloat = scrollDirection == .down ? 1 : -1
+        let newY = scrollView.contentOffset.y + (distance * direction)
+        scrollView.contentOffset = CGPoint(x: 0, y: newY)
     }
 
     required init?(coder: NSCoder) {
