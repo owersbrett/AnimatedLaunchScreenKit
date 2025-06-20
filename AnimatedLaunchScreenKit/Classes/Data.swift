@@ -23,10 +23,16 @@ public class HPGAssets {
         return [
             .smashingDips, .cheesewheel, .getyourhotpotatoes, .tractor,
             .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler, .whatcani,
+            .smashingDips, .cheesewheel, .getyourhotpotatoes, .tractor,
+            .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler, .whatcani,
+            .smashingDips, .cheesewheel, .getyourhotpotatoes, .tractor,
+            .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler, .whatcani
         ].compactMap { image(for: $0) }
     }
     public static var columnTwo: [UIImage] {
         return [
+            .saltandpepper, .potatuhs, .droolingpotato, .whatcani, .truck, .illhaveuh, .sun, .getyourhotpotatoes,
+            .mashed, .crispycrisps, .butter, .potatuhs, .peeler, .whatcani,
             .saltandpepper, .potatuhs, .droolingpotato, .whatcani, .truck, .illhaveuh, .sun, .getyourhotpotatoes,
             .mashed, .crispycrisps, .butter, .potatuhs, .peeler, .whatcani
             
@@ -36,6 +42,9 @@ public class HPGAssets {
         return [
             .crispycrisps, .sun, .loadedspud, .peeler,
             .baked, .cheesewheel, .whatcani, .mashed, .smashingDips, .potatochip, .illhaveuh,  .saltandpepper, .potatuhs, .droolingpotato, .whatcani, .truck,
+            .crispycrisps, .sun, .loadedspud, .peeler,
+            .baked, .cheesewheel, .whatcani, .mashed, .smashingDips, .potatochip, .illhaveuh,  .saltandpepper, .potatuhs, .droolingpotato, .whatcani, .truck
+            
         ].compactMap { image(for: $0) }
     }
     
@@ -44,14 +53,18 @@ public class HPGAssets {
             .mashed, .whatcani, .butter, .illhaveuh,
             .cheesewheel, .potatuhs, .tractor, .crispycrisps, .saltandpepper, .getyourhotpotatoes, .droolingpotato, .crispycrisps, .sun, .loadedspud, .peeler,
             .baked,
+            .mashed, .whatcani, .butter, .illhaveuh,
+            .cheesewheel, .potatuhs, .tractor, .crispycrisps, .saltandpepper, .getyourhotpotatoes, .droolingpotato, .crispycrisps, .sun, .loadedspud, .peeler,
+            .baked
         ].compactMap { image(for: $0) }
     }
     
     public static var columnFive : [UIImage] {
         return [
             .cheesewheel, .baked, .sun, .getyourhotpotatoes, .mashed,
-            .crispycrisps, .hashbrown, .illhaveuh, .truck, .baked, .potatochip, .loadedspud,.mashed, .whatcani, .butter, .illhaveuh,
-            .cheesewheel,
+            .crispycrisps, .hashbrown, .illhaveuh, .truck, .baked, .potatochip, .loadedspud,.mashed, .whatcani, .butter, .illhaveuh, .cheesewheel,
+            .cheesewheel, .baked, .sun, .getyourhotpotatoes, .mashed,
+            .crispycrisps, .hashbrown, .illhaveuh, .truck, .baked, .potatochip, .loadedspud,.mashed, .whatcani, .butter, .illhaveuh, .cheesewheel
         ].compactMap { image(for: $0) }
     }
 
