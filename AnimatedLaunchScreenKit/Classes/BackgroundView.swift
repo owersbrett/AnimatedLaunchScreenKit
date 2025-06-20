@@ -9,7 +9,6 @@ public class BackgroundView: UIView {
     
     // Single display link for all animations
     private var displayLink: CADisplayLink?
-    private var animationStartTime: CFTimeInterval = 0
     
     public init(configuration: AnimatedLaunchScreenConfiguration) {
         self.config = configuration
@@ -17,7 +16,6 @@ public class BackgroundView: UIView {
         setupStackView()
         createColumns()
     }
-    
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -62,41 +60,23 @@ public class BackgroundView: UIView {
     public func runPhaseOne() {
         guard !isBeingDeallocated else { return }
         
-        // Start all columns with their delays, but don't let them create their own display links
+        // Prepare all columns for animation with their individual delays
         for (index, column) in columnViews.enumerated() {
             let delay = Double(index) * 0.05
             column.prepareForAnimation(delay: delay, duration: config.animationDurations.spinDuration)
         }
         
-        // Create single display link
-        animationStartTime = CACurrentMediaTime()
+        // Create single display link to drive all animations
         displayLink = CADisplayLink(target: self, selector: #selector(updateAllColumns))
         displayLink?.add(to: .main, forMode: .common)
     }
     
-    func getScrollViews() -> [UIScrollView]? {
-        return []
-    }
-
-    public func stopAll() {
-        // Stop all column animations safely
-        for column in columnViews {
-            column.stopScrolling()
-        }
-    }
-    
-    // Add this method to prepare for deallocation
-    public func prepareForDeallocation() {
-        isBeingDeallocated = true
-        
-        // Stop all columns - since stopScrolling is now nonisolated, this is safe
-        for column in columnViews {
-            column.stopScrolling()
-            column.prepareForDeallocation()
-        }
-    }
-    
     @objc private func updateAllColumns() {
+        guard !isBeingDeallocated else {
+            stopAll()
+            return
+        }
+        
         let currentTime = CACurrentMediaTime()
         
         for column in columnViews {
@@ -104,4 +84,17 @@ public class BackgroundView: UIView {
         }
     }
 
+    public func stopAll() {
+        displayLink?.invalidate()
+        displayLink = nil
+    }
+    
+    public func prepareForDeallocation() {
+        isBeingDeallocated = true
+        stopAll()
+        
+        for column in columnViews {
+            column.prepareForDeallocation()
+        }
+    }
 }
