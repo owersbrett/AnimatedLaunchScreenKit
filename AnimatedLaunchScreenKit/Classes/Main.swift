@@ -87,7 +87,7 @@ public class AnimatedLaunchScreenViewController: UIViewController {
         cleanup()
         
         // Small delay to ensure cleanup completes
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
             guard let self = self else { return }
             
             // Get the window safely
