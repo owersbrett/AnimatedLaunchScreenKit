@@ -62,9 +62,9 @@ public class HPGAssets {
     public static var columnFive : [UIImage] {
         return [
             .cheesewheel, .baked, .sun, .getyourhotpotatoes, .mashed,
-            .crispycrisps, .hashbrown, .illhaveuh, .truck, .baked, .potatochip, .loadedspud,.mashed, .whatcani, .butter, .illhaveuh, .cheesewheel,
+            .crispycrisps, .hashbrown, .illhaveuh, .truck, .baked, .potatochip, .loadedspud,.mashed, .whatcani, .butter, .illhaveuh,
             .cheesewheel, .baked, .sun, .getyourhotpotatoes, .mashed,
-            .crispycrisps, .hashbrown, .illhaveuh, .truck, .baked, .potatochip, .loadedspud,.mashed, .whatcani, .butter, .illhaveuh, .cheesewheel
+            .crispycrisps, .hashbrown, .illhaveuh, .truck, .baked, .potatochip, .loadedspud,.mashed, .whatcani, .butter, .illhaveuh,
         ].compactMap { image(for: $0) }
     }
 
