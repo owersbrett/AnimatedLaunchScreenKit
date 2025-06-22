@@ -22,11 +22,11 @@ public class HPGAssets {
     public static var columnOne: [UIImage] {
         return [
             .smashingDips, .cheesewheel, .getyourhotpotatoes, .tractor,
-            .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler, .whatcani,
+            .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler,
             .smashingDips, .cheesewheel, .getyourhotpotatoes, .tractor,
-            .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler, .whatcani,
+            .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler,
             .smashingDips, .cheesewheel, .getyourhotpotatoes, .tractor,
-            .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler, .whatcani
+            .loadedspud, .fries, .baked, .butter, .potatuhs, .peeler
         ].compactMap { image(for: $0) }
     }
     public static var columnTwo: [UIImage] {
